@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
-    isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    // TODO(MGP): Learn to write tests for this!
+    isLongEnough: Ember.computed.gte('message.length', 7),
+    isValidEmail: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    isValid: Ember.computed.and('isLongEnough', 'isValidEmail'),
     isDisabled: Ember.computed.not('isValid'),
 
     emailAddress: '',
