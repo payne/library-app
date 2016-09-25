@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isDisabled: Ember.computed.empty('emailAddress'),
-
+  isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+  isDisabled: Ember.computed.not('isValid'),
+  
   emailAddress: '',
 
   actualEmailAddress: Ember.computed('emailAddress', function() { 
