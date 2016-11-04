@@ -8,3 +8,6 @@ Here is where this tutorial lives on my Mac MINI:
 /Users/mpayne/Study/JavaScript/Ember/myYoEmber/library-app
 
 Use https://github.com/fivetanley/ember-cli-dotenv for keys.  Thanks stackoverflow & google :-)
+
+I need to finish this!
+
